@@ -1,0 +1,81 @@
+import type { Talent } from './types';
+
+export const TALENTS: Talent[] = [
+  {
+    id: 'business_acumen',
+    name: '商业头脑',
+    description: '天生的商人直觉，投资回报率+5%',
+    rarity: 'common',
+    effect: { type: 'returnRate', value: 0.05 },
+  },
+  {
+    id: 'risk_taker',
+    name: '冒险精神',
+    description: '敢于冒险，暴击率+3%',
+    rarity: 'common',
+    effect: { type: 'critRate', value: 0.03 },
+  },
+  {
+    id: 'diplomatic',
+    name: '外交手腕',
+    description: '善于交际，声望获取+10%',
+    rarity: 'common',
+    effect: { type: 'reputationGain', value: 0.10 },
+  },
+  {
+    id: 'cautious',
+    name: '谨慎审慎',
+    description: '降低投资风险，失败率-3%',
+    rarity: 'common',
+    effect: { type: 'riskReduce', value: 0.03 },
+  },
+  {
+    id: 'market_sense',
+    name: '市场嗅觉',
+    description: '敏锐的市场洞察力，投资回报率+8%',
+    rarity: 'rare',
+    effect: { type: 'returnRate', value: 0.08 },
+  },
+  {
+    id: 'golden_touch',
+    name: '点金之手',
+    description: '暴击率+5%，暴击倍率+10%',
+    rarity: 'rare',
+    effect: { type: 'critRate', value: 0.05 },
+  },
+  {
+    id: 'crisis_manager',
+    name: '危机管理',
+    description: '降低危机损失，风险-5%',
+    rarity: 'rare',
+    effect: { type: 'riskReduce', value: 0.05 },
+  },
+  {
+    id: 'innovator',
+    name: '创新者',
+    description: '技术创新带来额外回报+12%',
+    rarity: 'epic',
+    effect: { type: 'returnRate', value: 0.12 },
+  },
+  {
+    id: 'financial_genius',
+    name: '金融天才',
+    description: '投资回报+10%，暴击率+5%',
+    rarity: 'epic',
+    effect: { type: 'returnRate', value: 0.10 },
+  },
+  {
+    id: 'visionary',
+    name: '远见卓识',
+    description: '暴击率+8%，声望+15%',
+    rarity: 'legendary',
+    effect: { type: 'critRate', value: 0.08 },
+  },
+  {
+    id: 'time_traveler',
+    name: '时间旅者',
+    description: '似乎知道未来，暴击率+10%，回报+15%',
+    rarity: 'legendary',
+    effect: { type: 'critRate', value: 0.10 },
+  },
+];
