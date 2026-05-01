@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Cinzel:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 30 80% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 30 80% 30%;
+    --radius: 0.625rem;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0A0A0A;
+    color: #F5F5F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .era-gradient-era1 {
+    background: radial-gradient(ellipse at center, rgba(139, 69, 19, 0.15) 0%, transparent 70%);
+  }
+
+  .era-gradient-era2 {
+    background: radial-gradient(ellipse at center, rgba(70, 130, 180, 0.15) 0%, transparent 70%);
+  }
+
+  .era-gradient-era3 {
+    background: radial-gradient(ellipse at center, rgba(46, 139, 87, 0.15) 0%, transparent 70%);
+  }
+
+  .era-gradient-era4 {
+    background: radial-gradient(ellipse at center, rgba(106, 90, 205, 0.15) 0%, transparent 70%);
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes card-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.25); }
+    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.5); }
+  }
+
+  @keyframes float-up {
+    0% { transform: translateY(0); opacity: 0.6; }
+    100% { transform: translateY(-100px); opacity: 0; }
+  }
+
+  @keyframes number-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite linear;
+  }
+
+  .animate-card-pulse {
+    animation: card-pulse 2s infinite;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @keyframes crisis-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(255,23,68,0.3), inset 0 0 30px rgba(255,23,68,0.05); border-color: rgba(255,23,68,0.4); }
+    50% { box-shadow: 0 0 40px rgba(255,23,68,0.5), inset 0 0 50px rgba(255,23,68,0.1); border-color: rgba(255,23,68,0.8); }
+  }
+
+  @keyframes rainbow-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+  }
+
+  @keyframes legendary-hue {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+}
